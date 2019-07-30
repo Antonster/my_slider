@@ -1,15 +1,25 @@
 class Slider {
   constructor(options) {
+    // slider block id
     this.element = options.element || document.getElementById('slider');
-    this.slider = this.element.querySelectorAll('div');
+    // slide change speed (milliseconds)
     this.speed = options.speed || 500;
+    // show side buttons (true or false)
     this.controls = options.controls || false;
+    // show pager (true or false)
     this.pager = options.pager || false;
+    // select animation ('slick' or 'fade')
     this.animationsType = options.animationsType || 'fade';
+    // slider infinite slides (true or false)
     this.infinite = options.infiniteSlides || false;
-    this.slideIndex = options.startSlide - 1 || 0;
+    // initial slide (1 - max slides)
+    this.slideIndex = options.startSlide - 1 || 1;
+    // automatic slide change (true or false)
     this.autoPlayer = options.autoPlayer || false;
+    // automatic slide change speed (milliseconds)
     this.autoPlayerSpeed = options.autoPlayerSpeed || 5000;
+
+    this.slider = this.element.querySelectorAll('div');
     this.sliderLength = this.slider.length;
 
     this.init();
@@ -207,7 +217,7 @@ new Slider({
   speed: 1000,
   controls: true,
   pager: true,
-  animationsType: 'fade',
+  animationsType: 'slick',
   infiniteSlides: true,
   startSlide: 1,
   autoPlayer: false,
