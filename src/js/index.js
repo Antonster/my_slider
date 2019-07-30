@@ -18,7 +18,7 @@ class Slider {
     this.autoPlayer = options.autoPlayer || false;
     // automatic slide change speed (milliseconds)
     this.autoPlayerSpeed = options.autoPlayerSpeed || 5000;
-    console.log(this.slideIndex);
+
     this.slider = this.element.querySelectorAll('div');
     this.sliderLength = this.slider.length;
 
