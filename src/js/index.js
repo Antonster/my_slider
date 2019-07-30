@@ -13,12 +13,12 @@ class Slider {
     // slider infinite slides (true or false)
     this.infinite = options.infiniteSlides || false;
     // initial slide (1 - max slides)
-    this.slideIndex = options.startSlide - 1 || 1;
+    this.slideIndex = options.startSlide - 1 || 0;
     // automatic slide change (true or false)
     this.autoPlayer = options.autoPlayer || false;
     // automatic slide change speed (milliseconds)
     this.autoPlayerSpeed = options.autoPlayerSpeed || 5000;
-
+    console.log(this.slideIndex);
     this.slider = this.element.querySelectorAll('div');
     this.sliderLength = this.slider.length;
 
