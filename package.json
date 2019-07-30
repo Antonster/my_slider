@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/Antonster/my_slider#readme",
   "scripts": {
-    "start": "parcel ./src/index.html",
+    "start": "parcel ./index.html",
     "lint": "eslint --debug src/",
     "prettier": "prettier --write src/**/*.js"
   },
